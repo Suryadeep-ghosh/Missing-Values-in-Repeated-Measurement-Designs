@@ -1,0 +1,1785 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Missing Values in Repeated Measurement Designs
+\end_layout
+
+\begin_layout Author
+Sanchita Khan 
+\begin_inset space ~
+\end_inset
+
+(STAT-24)
+\begin_inset Newline newline
+\end_inset
+
+Sumedha Guha 
+\begin_inset space ~
+\end_inset
+
+(STAT-05)
+\begin_inset Newline newline
+\end_inset
+
+Shramana Guin 
+\begin_inset space ~
+\end_inset
+
+(STAT-06)
+\begin_inset Newline newline
+\end_inset
+
+Suryadeep Ghosh 
+\begin_inset space ~
+\end_inset
+
+(STAT-28)
+\end_layout
+
+\begin_layout Date
+Third Year, Semester-V
+\end_layout
+
+\begin_layout Institute
+Department of Statistics
+\end_layout
+
+\begin_layout Section*
+Contents
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Contents
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What Is Missing Data?
+\end_layout
+
+\begin_layout Enumerate
+Missing Data in Clinical Trials.
+\end_layout
+
+\begin_layout Enumerate
+Reasons for Missing Data.
+\end_layout
+
+\begin_layout Enumerate
+Effects of Missing Data.
+\end_layout
+
+\begin_layout Enumerate
+Missing Data Mechanism.
+\end_layout
+
+\begin_layout Enumerate
+Types of Missing Data.
+\end_layout
+
+\begin_layout Enumerate
+General Approaches to Missing Data.
+\end_layout
+
+\begin_layout Enumerate
+References.
+\end_layout
+
+\begin_layout Enumerate
+Acknowledgement.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+What is Missing Data?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+What Is Missing Data?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In simple words, missing data are defined as values that are not observed
+ and would be meaningful if they are observed.
+\end_layout
+
+\begin_layout Itemize
+Missing data can be anything from missing sequence, incomplete feature,
+ files missing, information incomplete, data entry error etc.
+ Most datasets in the real world contain missing data.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Missing Data in Clinical Trials
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Missing Data in Clinical Trials
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Clinical trials comparing different treatments on participants often involve
+ repeated measures of the outcome over time.
+\end_layout
+
+\begin_layout Itemize
+It is common in clinical trials for studies comparing the efficacy of several
+ noncurative treatments because they can effectively remove within subject
+ variances.
+\end_layout
+
+\begin_layout Itemize
+However, by the very nature of taking repeated measurements, they also suffer
+ from the common problem of missing values on one or more occasions.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Reasons For Missing Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Reasons For Missing Data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Patients are in very critical conditions.
+\end_layout
+
+\begin_layout Itemize
+Patients wants to change the treatment.
+\end_layout
+
+\begin_layout Itemize
+Missing due to the breakdown of machines .
+\end_layout
+
+\begin_layout Itemize
+Failed in continuing the follow up.
+\end_layout
+
+\begin_layout Itemize
+Failed to answer some questionnaires.
+\end_layout
+
+\begin_layout Itemize
+Patients are cured or died before study.
+\end_layout
+
+\begin_layout Itemize
+Investigators forgot to collect the data.
+\end_layout
+
+\begin_layout Itemize
+Family migrated.
+\end_layout
+
+\begin_layout Itemize
+Patients' profile might be missing.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Effects of Missing Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Effects of Missing Data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Power.
+\end_layout
+
+\begin_layout Itemize
+Bias.
+\end_layout
+
+\begin_layout Itemize
+Inaccurate results.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Missing Data Mechanism
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Missing Data Mechanism
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Understanding the reasons why data are missing is important for handling
+ the remaining data correctly.
+\end_layout
+
+\begin_layout Itemize
+In most studies unobserved data are treated as 
+\begin_inset Quotes eld
+\end_inset
+
+missing
+\begin_inset Quotes erd
+\end_inset
+
+ in the sense that their underlying values that could have been observed
+ but were not.
+\end_layout
+
+\begin_layout Itemize
+Depending on how the data have become missing, treating unobserved data
+ simply as missing can lead to serious estimation bias.
+\end_layout
+
+\begin_layout Itemize
+The most appropriate way to handle missing data or incomplete data depends
+ on how the data points became missing.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Types of Missing Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Types of Missing Data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Little and Rubin defined three unique types of missing data mechanism, distingui
+shing among the different situations according to how the data became missing
+ and incomplete.
+\end_layout
+
+\begin_layout Itemize
+They are,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+MCAR: Missing completely at random.
+\end_layout
+
+\begin_layout Enumerate
+MAR: Missing at random.
+\end_layout
+
+\begin_layout Enumerate
+MNAR: Missing not at random.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Missing Completely at Random
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Missing completely at random (MCAR)
+\series default
+ is defined as when the probability that the data are missing is not related
+ to either the specific value which is supposed to be obtained or the set
+ of observed responses, i.e MCAR situation assumes that the reasons why the
+ data are missing is completely unrelated to the data (both covariates and
+ response).
+\end_layout
+
+\begin_layout Itemize
+MCAR is an ideal but unreasonable assumption for many studies performed
+ in the field of anesthesiology.
+ 
+\end_layout
+
+\begin_layout Itemize
+However, if data are missing by design, because of an equipment failure
+ or because the samples are lost in transit or technically unsatisfactory,
+ such data are regarded as being MCAR.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Missing Completely at Random
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+An example of MCAR is a weighing scale that ran out of batteries.
+ Some of the data will be missing simply because of bad luck.
+\end_layout
+
+\begin_layout Itemize
+Another example is when we take a random sample of a population, where each
+ member has the same chance of being included in the sample.
+ The (unobserved) data of members in the population that were not included
+ in the sample are MCAR.
+\end_layout
+
+\begin_layout Itemize
+MCAR causes enlarged standard errors due to the reduced sample size, but
+ does not cause bias.
+\end_layout
+
+\begin_layout Itemize
+Thus, power may be lost in the design, but the estimated parameters are
+ not biased by the absence of the data.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Missing at Random
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+MAR means the propensity or tendency for a data point to be missing is not
+ related to the missing data, but it is related to some of the observed
+ data.
+\end_layout
+
+\begin_layout Itemize
+That is when the missingness is not random, but where missingness can be
+ fully accounted for by variables where there is complete information.
+\end_layout
+
+\begin_layout Itemize
+MAR is a much broader class than MCAR.
+\end_layout
+
+\begin_layout Itemize
+For example, when we take a sample from a population, where the probability
+ to be included depends upon some known property.
+\end_layout
+
+\begin_layout Itemize
+Another example of MAR is that males are less likely to fill in a depression
+ survey but this has nothing to do with their level of depression, after
+ accounting for maleness.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Missing at Random
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The practical problem with the MAR mechanism is that there is no way to
+ confirm that the probability of missing data on Y is solely a function
+ of other measured variables
+\end_layout
+
+\begin_layout Itemize
+For example, suppose that Hispanic children with poor reading skills have
+ higher rates of missingness on the reading achievement test.
+ 
+\end_layout
+
+\begin_layout Itemize
+This situation is inconsistent with an MAR mechanism because there is a
+ relationship between reading achievement and missingness, even after controllin
+g for ethnicity
+\end_layout
+
+\begin_layout Itemize
+However, the researcher would have no way of verifying the presence or absence
+ of this relationship without knowing the values of the missing achievement
+ scores.
+ 
+\end_layout
+
+\begin_layout Itemize
+Consequently, there is no way to test the MAR mechanism or to verify that
+ scores are MAR.
+\end_layout
+
+\begin_layout Itemize
+This represents an important practical problem for missing data analyses
+ because maximum likelihood estimation and multiple imputation (the two
+ techniques that methodologists currently recommend) assume an MAR mechanism
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Missing Not at Random
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Missing not at random (MNAR)
+\series default
+ (also known as nonignorable nonresponse) is data that is neither MAR nor
+ MCAR (i.e.
+ the value of the variable that's missing is related to the reason it's
+ missing).
+\end_layout
+
+\begin_layout Itemize
+To extend the previous example, this would occur if men failed to fill in
+ a depression survey because of their level of depression.
+\end_layout
+
+\begin_layout Itemize
+The cases of MNAR data are problematic.
+\end_layout
+
+\begin_layout Itemize
+The only way to obtain an unbiased estimate of the parameters in such a
+ case is to model the missing data.
+\end_layout
+
+\begin_layout Itemize
+The model may then be incorporated into a more complex one for estimating
+ the missing values.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+General Approaches to Missing Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+General approaches to Missing Data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Analysis techniques have to deal with incomplete /missing data as it is
+ useful especially in case of expermiemnts involving humans as data in these
+ cases is expensive and significant.
+\end_layout
+
+\begin_layout Itemize
+Three broad catagories of methods for handeling missing data are,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Deletion.
+\end_layout
+
+\begin_layout Enumerate
+Imputation.
+\end_layout
+
+\begin_layout Enumerate
+Augmentation.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+For any missing data methods to be effective,it is important for them to
+ incorporate a specific missing data mechanism in its development.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Data deletion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Data deletion methods such as list-wise and pair-wise deletion are efficient
+ ways of dealing with missing data as long as missing data are MCAR.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+1.Complete Case Analysis (Listwise Deletion)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+When some variables are not recorded for some of the units, a simple expedient
+ , is simply to discard the data for any case that has one or more missing
+ values and to analyze only the units with complete data.
+\end_layout
+
+\begin_layout Itemize
+Example: Here we are deleteing the incomplete units of data.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Graphics
+	filename C:/Users/LENOVO/OneDrive/Desktop/Listwise.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Advantages
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It is easy to implement and may be satisfactory with small amounts of missing
+ .Restricting the analyses to the complete cases eliminates the need for
+ specialized software and complex missing data handling techniques.
+\end_layout
+
+\begin_layout Itemize
+listwise deletion can produce unbiased estimates of regression slopes under
+ any missing data mechanism, provided that missingness is a function of
+ a predictor variable and not the outcome variable (Little, 1992).
+ This relatively esoteric scenario is the only situation in which listwise
+ deletion is likely to outperform maximum likelihood estimation and multiple
+ imputation with missing not at random (MNAR) data.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Disadvantages
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+It can lead to serious biases, however, and it is not usually very efficient,
+ especially when drawing inferences for subpopulations.
+ because , it requires MCAR data and can produce distorted parameter estimates
+ when this assumption does not hold.
+\end_layout
+
+\begin_layout Itemize
+listwise deletion is potentially very wasteful, particularly when the discarded
+ cases have data on a large number of variables.
+ Deleting the incomplete data records can produce a dramatic reduction in
+ the total sample size.
+\end_layout
+
+\begin_layout Itemize
+These shortcoming led to investigators to develop the following second approach
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+2.
+ Available Case Analysis (pairwise deletion)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This uses all available data to estimate parameters of the model.
+\end_layout
+
+\begin_layout Itemize
+When a researcher looks at univariate descriptive statistics of a data set
+ with missing observations, he or she is using available case analysis,
+ examining the means and variances of the variables observed throughout
+ the data set.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Advantages
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+When the data are MCAR, when the remaining observations are representative
+ of the originally identified data set shows that available case analysis
+ provides consistent estimates when variables are moderately correlated
+ in regression models.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Disadvantages
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The primary problem with pairwise deletion is that it requires MCAR data
+ and can produce distorted parameter estimates when this assumption does
+ not hold.
+\end_layout
+
+\begin_layout Itemize
+When calculating the correlation coefficient 
+\begin_inset Formula $r=\frac{\hat{\sigma}_{XY}}{\sqrt{\hat{\sigma}_{X}.\hat{\sigma}_{Y}}}$
+\end_inset
+
+, variable case analysis often might lead to implausible values of r, such
+ as estimating correlations outside the range of 
+\begin_inset Formula $-1.0$
+\end_inset
+
+ to 
+\begin_inset Formula $1.0$
+\end_inset
+
+ .Errors in estimation occur because of the differeing number of observations
+ used to estimate components of r .
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Imputation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Imputation is the process of replacing missing data with substituted values.
+\end_layout
+
+\begin_layout Itemize
+An advantage of the approach is that one can use standard statistical software
+ to analyze the resulting completely filled data.
+\end_layout
+
+\begin_layout Itemize
+Two popular method of imputation are 
+\series bold
+Single imputation
+\series default
+ and 
+\series bold
+Multiple imputation
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+We may be familiar with filling missing values with the sample mean value
+ (mean imputation).
+\end_layout
+
+\begin_layout Itemize
+Alternatively, missing data imputation can be slightly more sophisticated,
+ using regression predictions to fill in missing cases (regression imputation).
+\end_layout
+
+\begin_layout Itemize
+These methods, known as single imputation techniques.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Imputation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Here the imputed value is treated as the true value, ignoring the fact that
+ no imputation method can give the exact value.
+\end_layout
+
+\begin_layout Itemize
+Single imputation does not reflect the uncertainty about the prediction
+ of the missing values.
+\end_layout
+
+\begin_layout Itemize
+Here we use multiple imputation.
+\end_layout
+
+\begin_layout Itemize
+Multiple imputation uses a predicted value for a given subject and time
+ point using statistical modeling of available data.
+\end_layout
+
+\begin_layout Itemize
+The processes and results of data augmentation are quite similar to those
+ of MI.
+ But they are complex in nature.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Use of Maximum likelihood
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Maximum likelihood also plays a central role in missing data analysis.
+\end_layout
+
+\begin_layout Itemize
+The main aim is to analyze the full, incomplete data set using maximum likelihoo
+d estimation.
+\end_layout
+
+\begin_layout Itemize
+This method does not impute any data, but rather uses each cases available
+ data to compute maximum likelihood estimates.
+\end_layout
+
+\begin_layout Itemize
+The maximum likelihood estimate of a parameter is the value of the parameter
+ that is most likely to have resulted in the observed data.
+\end_layout
+
+\begin_layout Itemize
+The starting point for a maximum likelihood analysis is to specify a distributio
+n for the population data.
+\end_layout
+
+\begin_layout Itemize
+Suppose we have n independent observations 
+\begin_inset Formula $(i=1,…,n)$
+\end_inset
+
+ on 
+\begin_inset Formula $k$
+\end_inset
+
+ variables 
+\begin_inset Formula $(y_{i1},y_{i2},...,y_{ik})$
+\end_inset
+
+ and no missing data.
+ Then the likelihood function is 
+\begin_inset Formula $L=\stackrel[i=1]{n}{\prod}f_{i}(y_{i1},y_{i2},...,y_{ik};\theta)$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Use of Maximum Likelihood 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Now if there are 
+\begin_inset Formula $m$
+\end_inset
+
+ observations with complete data and 
+\begin_inset Formula $n-m$
+\end_inset
+
+ observations with data missing in 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+, the likelihood function for the full data set becomes 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L=\stackrel[i=1]{m}{\prod}f_{i}(y_{i1},y_{i2},...,y_{ik};\theta)\stackrel[m+1]{n}{\prod}f_{i}^{*}(y_{i3},...,y_{ik};\theta)$
+\end_inset
+
+ where 
+\begin_inset Formula $f_{i}^{*}(y_{i3},...,y_{ik};\theta)=\underset{y_{1}\,\,and\,y_{2}}{\sum\sum\,or\,\,\int\int}f_{i}(y_{i1},y_{i2},...,y_{ik};\theta)dy_{1}dy_{2}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+where the observations are ordered such that the first 
+\begin_inset Formula $m$
+\end_inset
+
+ have no missing data and the last 
+\begin_inset Formula $n-m$
+\end_inset
+
+have missing data.
+ 
+\end_layout
+
+\begin_layout Itemize
+This likelihood can then be maximized to get ML estimates of 
+\begin_inset Formula $θ$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Researchers in the social and the behavioral sciences routinely assume that
+ their variables are normally distributed in the population.
+\end_layout
+
+\begin_layout Itemize
+Maximum likelihood estimators is generally most powerful when the number
+ of complete pairs of observations is moderately large (larger than 20)
+ and the correlation is in the range of 
+\begin_inset Formula $0.3–0.9$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+References
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+
++-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+References
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Statistical Analysis With Missing Data, Third Edition, Roderick J.A.
+ Little, Donald B.
+ Rubin.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Graphics
+	filename C:/Users/LENOVO/Downloads/1613982173881.jpg
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Missing Values in Repeated Measurement Designs, Keumhee Cho Carriere, Rong
+ Huang, Yuanyuan Liang, Xiaoming Sheng.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Graphics
+	filename C:/Users/LENOVO/Downloads/1613981859021.jpeg
+	scale 5
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+References
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Applied Missing Data Analysis, Craig K.
+ Enders
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Graphics
+	filename C:/Users/LENOVO/OneDrive/Desktop/download.jfif
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Acknowledgement
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Acknowledgement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+We would like to express our special thanks of gratitude to our respected
+ 
+\series bold
+Professor Arunangshu Biswas
+\series default
+ who gave us the golden opportunity to do this wonderful presentation on
+ the topic 
+\series bold
+Missing Values in Repeated Measurement Designs
+\series default
+, which also helped us in doing a lot of Research and we came to know about
+ so many new things.
+ We are really thankful to him.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\end_body
+\end_document
